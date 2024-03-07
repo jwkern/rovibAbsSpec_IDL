@@ -5,7 +5,8 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________________________________________
 GENERAL DESCRIPTION:
-This IDL script models a multi-component absorption spectrum in the form of cross-sectional ground-based telescope data.
+This IDL script models a multi-component ro-vibrational absorption spectrum of carbon-monoxide (CO) using radiative transfer equations and assuming that the gas is 
+in local thermodynamic equilibrium (LTE). 
 
 ___________________________________________________________________________________________________________________________________________________________________
 DATA DESCRIPTION:
@@ -17,8 +18,8 @@ CODE DESCRIPTION:
 The code first defines the constants and other molecular properties. Then these molecular properties are used to calculate the optical depth of each transition as 
 a function of wavenumber. These optical depths are the input for radiative transfer equations (i.e. e^-tau) from which the spectrum of each component is generated. 
 Then for physical reasons, the lines are weighted with a veiling function, and then convolved with their respective doppler broadening. Then the total spectrum is 
-constructed and is convolved with the instrument resolution. The code then plots the results in four .png files for each of the 12CO v=1-0, 12CO v=2-1, 13CO v=1-0, 
-and C18O v=1-0 transitions. 
+constructed and convolved with the instrument resolution. The output of this code are a series of model comparison plots (model_*.png) containing a subset of empirical 
+spectral lines of each transition type (e.g 12CO v=1-0, 12CO v=2-1, 13CO v=1-0, and C18O v=1-0) with the model spectrum overplotted. 
 
 ___________________________________________________________________________________________________________________________________________________________________
 RUNNING THE CODE:
@@ -29,10 +30,9 @@ RUNNING THE CODE:
 
 3) Run the script by typing the following into the command line:
 
-           restore,'/home/jwkern/Research/.../gvtauSpec_JWK.dat'
+           restore,'gvtauSpec_JWK.dat'
            .r rovibAbsSpec_JWK.pro
    
-   P.S. Don't forget to change the directory path
 ___________________________________________________________________________________________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________
