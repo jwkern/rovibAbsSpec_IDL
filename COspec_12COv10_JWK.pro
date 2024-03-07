@@ -1,3 +1,8 @@
+;Working to clean up the code and delete superfluous lines of test code and other
+;miscellaneous plots
+;
+;Update likely March 6th-8th
+;
 ;Create synthetic spectrum of optically thick LTE gas 
 ;assuming gaussian lineshape. 
 ; i.e. -A0*exp(-(freq-A1)^2/(A2^2)
