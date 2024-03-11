@@ -28,7 +28,9 @@ RUNNING THE CODE:
  
 2) In a terminal, cd into the directory that now contains the script and the data
 
-3) Run the script by typing the following into the command line:
+3) Edit the directory paths on lines 66-69 in the rovibAbsSpec_JWK.pro script to point the location of the files on your local machine 
+
+4) Run the script by typing the following into the command line:
 
            restore,'gvtauSpec_JWK.dat'
            .r rovibAbsSpec_JWK.pro
